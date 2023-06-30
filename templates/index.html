@@ -276,20 +276,23 @@ button {
 							</div>
 					</label>
 					<label class="form-group">
-						<input type="text" class="form-control" name="total_cholesterol" min=130  max=320  required>
-						<span for="">Total cholesterol level</span>
-						<span class="border"></span>
-					</label>
+            <input type="number" class="form-control" name="total_cholesterol" min="130" max="320" required>
+            <span for="">Total cholesterol level</span>
+            <span class="border"></span>
+            <div id="total-cholesterol-warning"></div>
+          </label>
           <label class="form-group">
-						<input type="text" class="form-control" name="hdl_cholesterol" min=20  max=100 required>
-						<span for="">HDL cholesterol level</span>
-						<span class="border"></span>
-					</label>
-					<label class="form-group">
-						<input type="text" class="form-control" name="systolic_blood_pressure" min=90  max=200 required>
-						<span for="">Systolic blood pressure</span>
-						<span class="border"></span>
-					</label>
+            <input type="number" class="form-control" name="hdl_cholesterol" min="20" max="100" required>
+            <span for="">HDL cholesterol level</span>
+            <span class="border"></span>
+            <div id="hdl-cholesterol-warning"></div>
+          </label>
+          <label class="form-group">
+            <input type="number" class="form-control" name="systolic_blood_pressure" min="90" max="200" required>
+            <span for="">Systolic blood pressure</span>
+            <span class="border"></span>
+            <div id="systolic-bp-warning"></div>
+          </label>
 					<label class="form-group">
 						<input type="text" class="form-control" name="Diastolic_b_p" required>
 						<span for="">Diastolic blood pressure</span>
