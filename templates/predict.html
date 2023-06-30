@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Healthy Heart</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+    <style>
+
+        body {
+          font-family: "Montserrat-Regular";
+          color: #48B4F4;
+          font-size: 15px;
+          margin: 0; }
+        
+        input, textarea, select, button {
+          font-family: "Montserrat-Regular";
+          color:#48B4F4; 
+          font-size: 15px; }
+        
+        p, h1, h2, h3, h4, h5, h6, ul {
+          margin: 0; }
+        
+        img {
+          max-width: 100%; }
+        
+        ul {
+          padding-left: 0;
+          margin-bottom: 0; }
+        
+        a:hover {
+          text-decoration: none; }
+        
+        :focus {
+          outline: none; }
+        
+        .wrapper {
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          background: url("/static/images/Contact.jpg") no-repeat;
+          background-size: cover; }
+        
+        .inner {
+          max-width: 758px;
+          margin: auto;
+          background: #fff;
+          border: 5px solid #48B4F4;
+          padding: 77px 99px 87px;
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+          -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+          -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+          -ms-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+          -o-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2); }
+          
+       
+      
+      
+          
+        
+        @media (max-width: 767px) {
+          h3 {
+            font-size: 38px; }
+        
+          p {
+            font-size: 14px;
+            padding: 0; }
+        
+          .inner {
+            padding: 27px 20px 37px;
+            border: none;
+            box-shadow: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            -ms-box-shadow: none;
+            -o-box-shadow: none; }
+        
+          .wrapper {
+            background: #39459b;
+            border: 10px solid #0d99d7; } }
+            .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+        /*# sourceMappingURL=style.css.map */
+        
+           </style>
+	<body>
+
+		<div class="wrapper">
+			<div class="inner">
+				{% if predict_disease==1 %}
+			
+					 <h1 style="font-size: 25px; text-align: center;">You have a risk of coronary 
+            heart disease CHD.</h1>
+            <br>
+            <h4 style="font-size: 25px; text-align: center;"> 
+              Risk precentage is : <b><span> {{Risk}} </span></b></h4>
+            <br> <br> 
+            <img class="center" src="/static/images/no.png" alt="risk of coronary" width="250" height="250">
+            <br> <br> 
+           
+                {% elif predict_disease==0 %}
+				<h1 style="font-size: 25px;">You have no risk of coronary 
+          heart disease CHD</h1>
+          <br>
+            <h4 style="font-size: 25px; text-align: center;"> 
+              Risk precentage is : <b><span> {{Risk}} </span></b></h4>
+          <br> <br>  
+          <img class="center" src="/static/images/yes.png" alt="risk of coronary" width="250" height="300">
+          <br> <br> 
+          
+          
+                {% endif %}
+				
+				
+				
+			</div>
+		</div>
+		
+	</body>
+</html>

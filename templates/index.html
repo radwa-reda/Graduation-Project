@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Healthy Heart</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="/static/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="/static/css/style.css">
+	</head>
+   <style>
+
+body {
+  font-family: "Montserrat-Regular";
+  color: #48B4F4;
+  font-size: 15px;
+  margin: 0; }
+
+input, textarea, select, button {
+  font-family: "Montserrat-Regular";
+  color:#48B4F4; 
+  font-size: 15px; }
+
+p, h1, h2, h3, h4, h5, h6, ul {
+  margin: 0; }
+
+img {
+  max-width: 100%; }
+
+ul {
+  padding-left: 0;
+  margin-bottom: 0; }
+
+a:hover {
+  text-decoration: none; }
+
+:focus {
+  outline: none; }
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url("/static/images/Contact.jpg") no-repeat;
+  background-size: cover; }
+
+.inner {
+  max-width: 758px;
+  margin: auto;
+  background: #fff;
+  border: 5px solid #48B4F4;
+  padding: 77px 99px 87px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2); }
+  
+textarea {
+  resize: none; }
+
+h3 {
+  text-transform: uppercase;
+  font-size: 45px;
+  font-family: "Montserrat-Bold";
+  text-align: center;
+  margin-bottom: 12px; }
+
+p {
+  text-align: center;
+  padding: 0 10px;
+  margin-bottom: 55px;
+  line-height: 1.8; }
+
+.form-group {
+  position: relative;
+  display: block;
+  margin-bottom: 38px; }
+  .form-group span {
+    font-size: 15px;
+    color: #000000;
+    position: absolute;
+    top: 11px;
+    transition: all .2s ease;
+    transform-origin: 0 0;
+    cursor: text; }
+  .form-group span.border {
+    height: 2px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 41px;
+    transform: scaleX(0);
+    transition: all .15s ease;
+    background: #C6E7FA; }
+
+.form-control {
+  border: none;
+  border-bottom: 2px solid #C6E7FA;
+  display: block;
+  width: 100%;
+  height: 43px;
+  font-size: 15px;
+  background: none;
+  font-family: "Montserrat-SemiBold"; }
+  .form-control:focus, .form-control:valid {
+    border-bottom: 2px solid #C6E7FA; }
+    .form-control:focus + span, .form-control:valid + span {
+      transform: translateY(-22px) scale(0.8); }
+      .form-control:focus + span + .border, .form-control:valid + span + .border {
+        transform: scaleX(1); }
+
+textarea.form-control {
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+button {
+  border: none;
+  width: 162px;
+  height: 51px;
+  border: 2px solid #48B4F4;
+  margin: auto;
+  margin-top: 60px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: none;
+  color: #000000;
+  text-transform: uppercase;
+  font-family: "Montserrat-SemiBold";
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+  button i {
+    margin-left: 10px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out; }
+  button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #48B4F4;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out; }
+  button:hover {
+    border-color: transparent; }
+    button:hover:before {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1); }
+    button:hover i {
+      -webkit-transform: translateX(4px);
+      transform: translateX(4px); }
+
+@media (max-width: 767px) {
+  h3 {
+    font-size: 38px; }
+
+  p {
+    font-size: 14px;
+    padding: 0; }
+
+  .inner {
+    padding: 27px 20px 37px;
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none; }
+
+  .wrapper {
+    background: #39459b;
+    border: 10px solid #0d99d7; } }
+
+/*# sourceMappingURL=style.css.map */
+
+   </style>
+	<body>
+
+		<div class="wrapper">
+			<div class="inner"> 
+				<form action="/predict" method="GET">
+					<h3>Healthy Heart</h3>
+					<p>Coronary artery disease (CAD) is one of the common 
+						diseases around the world. This necessitates a 
+						prompt and precise identification of cardiac 
+						disease. 
+					</p>
+					<label class="form-group" >
+						<span style="padding-bottom:10px ;"> Choose your Gender :</span ><br>
+					<div class="group" style="padding-top:30px ;font-size: 15px; " 
+					>
+						<input type="radio"  id="Male" name="gender" value="1">
+						<label for="Male">Male</label><br>
+						<input type="radio" id="Female" name="gender" value="0">
+						<label for="css">Female</label><br>
+					</div>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="number" class="form-control" name="age" required>
+						<span>Your Age</span>
+						<span class="border"></span>
+					</label>
+          
+					<label class="form-group">
+						<span style="padding-bottom:10px ;"> Do you smoke ?</span ><br>
+							<div class="group" style="padding-top:30px ;font-size: 15px; " >
+								<input type="radio"  id="smoke" name="smoker" value="1">
+								<label for="smoke">Yes</label><br>
+								<input type="radio" id="nosmoke" name="smoker" value="0">
+								<label for="nosmoke">No</label><br>
+							</div>
+						
+					</label>
+					<label class="form-group">
+						<input type="text" class="form-control" name="cigarettes" required>
+						<span>The average number of cigarettes you 
+							smoke in a day.</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<span style="padding-bottom:10px ;"> Are you taking blood pressure medication?</span ><br>
+							<div class="group" style="padding-top:30px ;font-size: 15px; " >
+								<input type="radio"  id="take_pre_med" name="blood_pressure_med_treatment" value="1">
+								<label for="take_pre_med">Yes</label><br>
+								<input type="radio" id="no_take_pre_med" name="blood_pressure_med_treatment" value="0">
+								<label for="no_take_pre_med">No</label><br>
+							</div>
+						
+					</label>
+					
+					<label class="form-group">
+						<span style="padding-bottom:10px ;"> Do you suffer from high blood pressure or not?</span ><br>
+							<div class="group" style="padding-top:30px ;font-size: 15px; " >
+								<input type="radio"  id="high_blood_pressure" name="is_high_blood_pressure" value="1">
+								<label for="high_blood_pressure">Yes</label><br>
+								<input type="radio" id="nohigh_blood_pressure" name="is_high_blood_pressure" value="0">
+								<label for="nohigh_blood_pressure">No</label><br>
+							</div>
+					</label>
+					<label class="form-group">
+						<span style="padding-bottom:10px ;"> Do you suffer from diabetes or not ?</span ><br>
+							<div class="group" style="padding-top:30px ;font-size: 15px; " >
+								<input type="radio"  id="diabetes" name="is_diabetes" value="1">
+								<label for="diabetes">Yes</label><br>
+								<input type="radio" id="nodiabetes" name="is_diabetes" value="0">
+								<label for="nodiabetes">No</label><br>
+							</div>
+					</label>
+					<label class="form-group">
+						<input type="text" class="form-control" name="total_cholesterol" min=130  max=320  required>
+						<span for="">Total cholesterol level</span>
+						<span class="border"></span>
+					</label>
+          <label class="form-group">
+						<input type="text" class="form-control" name="hdl_cholesterol" min=20  max=100 required>
+						<span for="">HDL cholesterol level</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="text" class="form-control" name="systolic_blood_pressure" min=90  max=200 required>
+						<span for="">Systolic blood pressure</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="text" class="form-control" name="Diastolic_b_p" required>
+						<span for="">Diastolic blood pressure</span>
+						<span class="border"></span>
+					</label>
+					
+					<label class="form-group">
+						<input type="text" class="form-control" name="glucose"  required>
+						<span for="">Glucose</span>
+						<span class="border"></span>
+					</label>
+					<button type="submit">Predict 
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+					<br>
+					
+				</form>
+				
+			</div>
+		</div>
+		
+	</body></html>
