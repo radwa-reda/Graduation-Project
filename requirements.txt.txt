@@ -1,6 +1,0 @@
-gunicorn
-numpy
-flask
-joblib
-scikit-learn
-Jinja
